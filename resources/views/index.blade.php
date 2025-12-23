@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Yuk Sehat!! | Jurnal Kesehatan</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
-    
-    <link rel="icon" type="image/x-icon" href="{{ secure_asset('assets/img/favicon.ico') }}?v=1">
-    <link rel="icon" type="image/png" sizes="192x192" href="{{ secure_asset('assets/img/icon-192.png') }}?v=1">
-    <link rel="apple-touch-icon" href="{{ secure_asset('assets/img/apple-touch-icon.png') }}?v=1">
-    <link rel="manifest" href="{{ secure_asset('manifest.json') }}">
-    <meta name="theme-color" content="#2f7f6a">
-    
-    <style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yuk Sehat!! | Jurnal Kesehatan</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <link rel="icon" type="image/x-icon" href="{{ secure_asset('assets/img/favicon.ico') }}?v=1">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ secure_asset('assets/img/icon-192.png') }}?v=1">
+    <link rel="apple-touch-icon" href="{{ secure_asset('assets/img/apple-touch-icon.png') }}?v=1">
+    <link rel="manifest" href="{{ secure_asset('manifest.json') }}">
+    <meta name="theme-color" content="#2f7f6a">
+    
+    <style>
         :root {
             --emerald-deep: #1a4d3e;
             --emerald-mid: #2f7f6a;
@@ -266,125 +266,125 @@
 </head>
 <body>
 
-    <nav>
-        <div class="logo">
-            <a href="{{ url('/') }}">
-                <img src="{{ asset('assets/img/full-logo.png') }}" style="width: 120px; height: auto; object-fit: contain;" alt="Logo Yuk Sehat">
-            </a>
-        </div>
-        <div class="nav-links">
-            <a href="#fitur">Fitur</a>
-            <a href="#tentang">Tentang Kami</a>
-            <a href="{{ route('login') }}" class="btn-login">Masuk Sekarang</a>
-        </div>
-    </nav>
+    <nav>
+        <div class="logo">
+            <a href="{{ url('/') }}">
+                <img src="{{ asset('assets/img/full-logo.png') }}" style="width: 120px; height: auto; object-fit: contain;" alt="Logo Yuk Sehat">
+            </a>
+        </div>
+        <div class="nav-links">
+            <a href="#fitur">Fitur</a>
+            <a href="#tentang">Tentang Kami</a>
+            <a href="{{ route('login') }}" class="btn-login">Masuk Sekarang</a>
+        </div>
+    </nav>
 
-    <section class="hero">
-        <div class="hero-text">
-            <h1>Mulai Hidup Sehat <span style="color: var(--emerald-mid)">Hari Ini.</span></h1>
-            <p>Platform pintar untuk mencatat aktivitas harian, menghitung BMI secara akurat, dan menjaga hidrasi tubuh Anda tetap optimal.</p>
-            <a href="/register" class="btn-primary">Gabung Sekarang — Gratis</a>
-        </div>
-        <div class="hero-image">
-            {{-- Image of a modern health dashboard interface showing heart rate, steps, and water intake --}}
-            
-            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" class="main-mockup" alt="Dashboard Health">
-            
-            <div class="floating-card f-1">
-                <i data-lucide="flame" style="color: #ef4444;"></i>
-                <div>
-                    <strong style="display:block; font-size: 14px;">540 kkal</strong>
-                    <small style="color: #64748b;">Bakar lemak hari ini</small>
-                </div>
-            </div>
-            <div class="floating-card f-2">
-                <i data-lucide="droplets" style="color: #0ea5e9;"></i>
-                <div>
-                    <strong style="display:block; font-size: 14px;">8/8 Gelas</strong>
-                    <small style="color: #64748b;">Target Air Tercapai</small>
-                </div>
-            </div>
-        </div>
-    </section>
+    <section class="hero">
+        <div class="hero-text">
+            <h1>Mulai Hidup Sehat <span style="color: var(--emerald-mid)">Hari Ini.</span></h1>
+            <p>Platform pintar untuk mencatat aktivitas harian, menghitung BMI secara akurat, dan menjaga hidrasi tubuh Anda tetap optimal.</p>
+            <a href="/register" class="btn-primary">Gabung Sekarang — Gratis</a>
+        </div>
+        <div class="hero-image">
+            {{-- Image of a modern health dashboard interface showing heart rate, steps, and water intake --}}
+            
+            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1200&q=80" class="main-mockup" alt="Dashboard Health">
+            
+            <div class="floating-card f-1">
+                <i data-lucide="flame" style="color: #ef4444;"></i>
+                <div>
+                    <strong style="display:block; font-size: 14px;">540 kkal</strong>
+                    <small style="color: #64748b;">Bakar lemak hari ini</small>
+                </div>
+            </div>
+            <div class="floating-card f-2">
+                <i data-lucide="droplets" style="color: #0ea5e9;"></i>
+                <div>
+                    <strong style="display:block; font-size: 14px;">8/8 Gelas</strong>
+                    <small style="color: #64748b;">Target Air Tercapai</small>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <section class="features" id="fitur">
-        <span class="section-tag">Fitur Utama</span>
-        <h2>Semua yang Anda Butuhkan untuk Sehat</h2>
-        <div class="feature-grid">
-            <div class="feature-card">
-                {{-- Image of a medical scale and measuring tape representing body mass index calculation --}}
-                
-                <img src="https://www.beliteweight.com/blog/wp-content/uploads/2024/03/BMI-calculator.jpg" class="feature-img" alt="BMI Scale">
-                <div class="icon-circle"><i data-lucide="scale"></i></div>
-                <h3>Analisis BMI</h3>
-                <p>Pantau komposisi tubuh secara berkala. Simpan riwayat berat badan Anda dan lihat grafiknya meningkat.</p>
-            </div>
-            
-            <div class="feature-card">
-                {{-- Image of a pair of running shoes on a running track representing active lifestyle --}}
-                
-                <img src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&fit=crop&w=600&q=80" class="feature-img" alt="Running Shoes">
-                <div class="icon-circle"><i data-lucide="footprints"></i></div>
-                <h3>Jurnal Aktivitas</h3>
-                <p>Catat langkah kaki dan durasi olahraga. Bagikan progres harian Anda untuk menjaga motivasi tetap tinggi.</p>
-            </div>
+    <section class="features" id="fitur">
+        <span class="section-tag">Fitur Utama</span>
+        <h2>Semua yang Anda Butuhkan untuk Sehat</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                {{-- Image of a medical scale and measuring tape representing body mass index calculation --}}
+                
+                <img src="https://www.beliteweight.com/blog/wp-content/uploads/2024/03/BMI-calculator.jpg" class="feature-img" alt="BMI Scale">
+                <div class="icon-circle"><i data-lucide="scale"></i></div>
+                <h3>Analisis BMI</h3>
+                <p>Pantau komposisi tubuh secara berkala. Simpan riwayat berat badan Anda dan lihat grafiknya meningkat.</p>
+            </div>
+            
+            <div class="feature-card">
+                {{-- Image of a pair of running shoes on a running track representing active lifestyle --}}
+                
+                <img src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&fit=crop&w=600&q=80" class="feature-img" alt="Running Shoes">
+                <div class="icon-circle"><i data-lucide="footprints"></i></div>
+                <h3>Jurnal Aktivitas</h3>
+                <p>Catat langkah kaki dan durasi olahraga. Bagikan progres harian Anda untuk menjaga motivasi tetap tinggi.</p>
+            </div>
 
-            <div class="feature-card">
-                {{-- Image of a reusable glass water bottle with fresh lemon slices inside representing hydration --}}
-                
-                <img src="https://dr-owl.com/cdn/shop/articles/water-5767178_1920.png?v=1724325828" class="feature-img" alt="Hydration">
-                <div class="icon-circle"><i data-lucide="glass-water"></i></div>
-                <h3>Pantau Hidrasi</h3>
-                <p>Pastikan tubuh mendapatkan asupan air yang cukup. Log setiap gelas air yang Anda minum dengan satu sentuhan.</p>
-            </div>
-        </div>
-    </section>
+            <div class="feature-card">
+                {{-- Image of a reusable glass water bottle with fresh lemon slices inside representing hydration --}}
+                
+                <img src="https://dr-owl.com/cdn/shop/articles/water-5767178_1920.png?v=1724325828" class="feature-img" alt="Hydration">
+                <div class="icon-circle"><i data-lucide="glass-water"></i></div>
+                <h3>Pantau Hidrasi</h3>
+                <p>Pastikan tubuh mendapatkan asupan air yang cukup. Log setiap gelas air yang Anda minum dengan satu sentuhan.</p>
+            </div>
+        </div>
+    </section>
 
-    <section class="about" id="tentang">
-        <div class="about-image">
-            {{-- Image of a person happily jogging in a green park during sunrise --}}
-            
-            <img src="https://images.unsplash.com/photo-1444491741275-3747c53c99b4?auto=format&fit=crop&w=1000&q=80" alt="Active Life">
-        </div>
-        <div class="about-text">
-            <span class="section-tag">Tentang Kami</span>
-            <h2>Pendamping Digital Untuk Gaya Hidup Sehat.</h2>
-            <p>Kami percaya kesehatan dimulai dari konsistensi mencatat hal-hal kecil. Dengan <strong>Yuk Sehat!!</strong>, Anda tidak perlu lagi menebak-nebak progres kesehatan Anda.</p>
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 30px;">
-                <div>
-                    <h4 style="color: var(--emerald-mid); font-size: 24px;">Simple</h4>
-                    <p style="font-size: 14px;">Input data hanya butuh waktu 30 detik.</p>
-                </div>
-                <div>
-                    <h4 style="color: var(--emerald-mid); font-size: 24px;">Personal</h4>
-                    <p style="font-size: 14px;">Insight yang disesuaikan dengan kondisi tubuh Anda.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+    <section class="about" id="tentang">
+        <div class="about-image">
+            {{-- Image of a person happily jogging in a green park during sunrise --}}
+            
+            <img src="https://images.unsplash.com/photo-1444491741275-3747c53c99b4?auto=format&fit=crop&w=1000&q=80" alt="Active Life">
+        </div>
+        <div class="about-text">
+            <span class="section-tag">Tentang Kami</span>
+            <h2>Pendamping Digital Untuk Gaya Hidup Sehat.</h2>
+            <p>Kami percaya kesehatan dimulai dari konsistensi mencatat hal-hal kecil. Dengan <strong>Yuk Sehat!!</strong>, Anda tidak perlu lagi menebak-nebak progres kesehatan Anda.</p>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 30px;">
+                <div>
+                    <h4 style="color: var(--emerald-mid); font-size: 24px;">Simple</h4>
+                    <p style="font-size: 14px;">Input data hanya butuh waktu 30 detik.</p>
+                </div>
+                <div>
+                    <h4 style="color: var(--emerald-mid); font-size: 24px;">Personal</h4>
+                    <p style="font-size: 14px;">Insight yang disesuaikan dengan kondisi tubuh Anda.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <footer>
-        <h2 style="margin-bottom: 20px;">Yuk Sehat!!</h2>
-        <p style="opacity: 0.7;">Investasi terbaik bukan emas, tapi tubuh yang sehat.</p>
-        <div class="footer-links">
-            <a href="#fitur">Fitur</a>
-            <a href="#tentang">Tentang Kami</a>
-            <a href="/login">Dashboard</a>
-            <a href="#">Privasi</a>
-        </div>
-        <p style="font-size: 12px; opacity: 0.5; margin-top: 40px;">&copy; 2025 Yuk Sehat!! Digital Labs. Seluruh hak cipta dilindungi.</p>
-    </footer>
+    <footer>
+        <h2 style="margin-bottom: 20px;">Yuk Sehat!!</h2>
+        <p style="opacity: 0.7;">Investasi terbaik bukan emas, tapi tubuh yang sehat.</p>
+        <div class="footer-links">
+            <a href="#fitur">Fitur</a>
+            <a href="#tentang">Tentang Kami</a>
+            <a href="/login">Dashboard</a>
+            <a href="#">Privasi</a>
+        </div>
+        <p style="font-size: 12px; opacity: 0.5; margin-top: 40px;">&copy; 2025 Yuk Sehat!! Digital Labs. Seluruh hak cipta dilindungi.</p>
+    </footer>
 
-    <script>
-        lucide.createIcons();
-    </script>
+    <script>
+        lucide.createIcons();
+    </script>
 
-    <script>
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function() {
-            navigator.serviceWorker.register("{{ secure_asset('service-worker.js') }}");
-        });
-    }
-    </script>
+    <script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register("{{ secure_asset('service-worker.js') }}");
+        });
+    }
+    </script>
 </body>
 </html>
