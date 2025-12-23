@@ -154,8 +154,8 @@
         /* Opsional: Jika ingin icon lebih kecil lagi saat sidebar dikolaps (collapsed) */
         .sidebar.collapsed nav a .icon i,
         .sidebar.collapsed nav a .icon svg {
-            width: 18px;
-            height: 18px;
+            width: 20px;
+            height: 20px;
         }
 
         /* MAIN CONTENT - BERGESER SINKRON DENGAN SIDEBAR */
