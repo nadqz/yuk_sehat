@@ -1,38 +1,38 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <link rel="manifest" href="{{ secure_asset('manifest.json') }}" crossorigin="use-credentials">
+    <link rel="manifest" href="{{ secure_asset('manifest.json') }}" crossorigin="use-credentials">
 
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <meta name="apple-mobile-web-app-title" content="YukSehat">
-    
-    {{-- Icon standar untuk Tab Browser --}}
-    <link rel="icon" type="image/x-icon" href="{{ secure_asset('assets/img/favicon.ico') }}">
-    
-    {{-- Icon untuk perangkat Apple (iPhone/iPad) --}}
-    <link rel="apple-touch-icon" href="{{ secure_asset('assets/img/apple-touch-icon.png') }}">
-    
-    {{-- Icon untuk Android/PWA --}}
-    <link rel="icon" type="image/png" sizes="192x192" href="{{ secure_asset('assets/img/icon-192.png') }}">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="YukSehat">
+    
+    {{-- Icon standar untuk Tab Browser --}}
+    <link rel="icon" type="image/x-icon" href="{{ secure_asset('assets/img/favicon.ico') }}">
+    
+    {{-- Icon untuk perangkat Apple (iPhone/iPad) --}}
+    <link rel="apple-touch-icon" href="{{ secure_asset('assets/img/apple-touch-icon.png') }}">
+    
+    {{-- Icon untuk Android/PWA --}}
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ secure_asset('assets/img/icon-192.png') }}">
 
-    <meta name="theme-color" content="#2f7f6a">
-    <meta name="msapplication-navbutton-color" content="#2f7f6a">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#2f7f6a">
+    <meta name="theme-color" content="#2f7f6a">
+    <meta name="msapplication-navbutton-color" content="#2f7f6a">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#2f7f6a">
 
-    <title>Yuk Sehat!! | @yield('title', 'Dashboard')</title>
+    <title>Yuk Sehat!! | @yield('title', 'Dashboard')</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <script src="https://unpkg.com/lucide@latest"></script>
 
-    <style>
+    <style>
         :root {
             --bg-main: #f6f9f8;
             --bg-soft: #fbfdfc;
@@ -55,6 +55,10 @@
         }
 
         * { box-sizing: border-box; }
+        html {
+            -webkit-text-size-adjust: 100%; /* Mencegah font membesar otomatis di iPhone/Chrome */
+            font-size: 16px; /* Mengunci standar ukuran 1rem */
+        }
 
         body {
             margin: 0;
@@ -63,6 +67,7 @@
             min-height: 100vh;
             overflow-x: hidden;
             color: var(--text-main);
+            max-width: 100vw;
         }
 
         .orb {
@@ -202,63 +207,61 @@
     </style>
 </head>
 <body>
-    <div class="orb orb1"></div>
-    <div class="orb orb2"></div>
+    <div class="orb orb1"></div>
+    <div class="orb orb2"></div>
 
-    @include('layouts.sidebar')
+    @include('layouts.sidebar')
 
-    <div style="flex: 1; display: flex; flex-direction: column;">
-        @include('layouts.topbar')
+    <div style="flex: 1; display: flex; flex-direction: column;">
+        @include('layouts.topbar')
 
-        <main class="main-content" id="mainContent">
-            @yield('content')
-        </main>
+        <main class="main-content" id="mainContent">
+            @yield('content')
+        </main>
 
-        <footer class="desktop-footer" style="padding: 20px 0; text-align: center; border-top: 1px solid #f1f5f9; margin-left: 260px; transition: 0.3s;">
-            <p style="font-size: 12px; color: #94a3b8; margin: 0;">
-                &copy; {{ date('Y') }} <span style="color: var(--emerald-deep); font-weight: 700;"> Yuk Sehat!!</span> 
-                <span class="desktop-only">• v1.0.1 Beta</span>
-            </p>
-        </footer>
-    </div>
+        <footer class="desktop-footer" style="padding: 20px 0; text-align: center; border-top: 1px solid #f1f5f9; margin-left: 260px; transition: 0.3s;">
+            <p style="font-size: 12px; color: #94a3b8; margin: 0;">
+                &copy; {{ date('Y') }} <span style="color: var(--emerald-deep); font-weight: 700;"> Yuk Sehat!!</span> 
+                <span class="desktop-only">• v1.0.1 Beta</span>
+            </p>
+        </footer>
+    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-   <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            lucide.createIcons();
-            
-            const sidebar = document.getElementById("sidebar");
-            const mainContent = document.getElementById("mainContent");
-            const sidebarToggle = document.getElementById("sidebarToggle");
-            const toggleIcon = document.getElementById("toggleIcon");
+   <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            lucide.createIcons();
+            
+            const sidebar = document.getElementById("sidebar");
+            const mainContent = document.getElementById("mainContent");
+            const sidebarToggle = document.getElementById("sidebarToggle");
+            const toggleIcon = document.getElementById("toggleIcon");
 
-            if(sidebarToggle) {
-                sidebarToggle.addEventListener("click", () => {
-                    // Hanya toggle di desktop
-                    if(window.innerWidth > 768) {
-                        sidebar.classList.toggle("collapsed");
-                        if(mainContent) mainContent.classList.toggle("collapsed");
-                        toggleIcon.textContent = sidebar.classList.contains("collapsed") ? "⮞" : "⮜";
-                    }
-                });
-            }
-        });
-    </script>
-    @stack('scripts')
-    @yield('page_scripts')
-    <script>
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function() {
-            navigator.serviceWorker.register("{{ secure_asset('service-worker.js') }}").then(function(registration) {
-                console.log('ServiceWorker registration successful with scope: ', registration.scope);
-            }, function(err) {
-                console.log('ServiceWorker registration failed: ', err);
-            });
-        });
-    }
+            if(sidebarToggle) {
+                sidebarToggle.addEventListener("click", () => {
+                    // Hanya toggle di desktop
+                    if(window.innerWidth > 768) {
+                        sidebar.classList.toggle("collapsed");
+                        if(mainContent) mainContent.classList.toggle("collapsed");
+                        toggleIcon.textContent = sidebar.classList.contains("collapsed") ? "⮞" : "⮜";
+                    }
+                });
+            }
+        });
+    </script>
+    @stack('scripts')
+    @yield('page_scripts')
+    <script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+            navigator.serviceWorker.register("{{ secure_asset('service-worker.js') }}").then(function(registration) {
+                console.log('ServiceWorker registration successful with scope: ', registration.scope);
+            }, function(err) {
+                console.log('ServiceWorker registration failed: ', err);
+            });
+        });
+    }
 </script>
 </body>
 </html>
-
-perkecil semua ukuran stylenya, karena ini hasilnya menjadi benar" sangat besar, cukup ubah stylenya saja ya gemini, tidak dengan format dan logikanya, berikan aku perubahan kode bagian style nya saja
