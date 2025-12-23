@@ -24,7 +24,7 @@
     <meta name="msapplication-navbutton-color" content="#2f7f6a">
     <meta name="apple-mobile-web-app-status-bar-style" content="#2f7f6a">
 
-    <title>@yield('title', 'Yuk Sehat!!')</title>
+    <title>Yuk Sehat!! | @yield('title', 'Dashboard')</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
     
