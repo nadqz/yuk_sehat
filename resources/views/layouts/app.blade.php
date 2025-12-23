@@ -176,34 +176,64 @@
 
     /* MOBILE ADJUSTMENTS */
     @media (max-width: 768px) {
-        .topbar { padding: 0 15px !important; }
-        .sidebar-header, .sidebar-toggle { display: none !important; }
-
-        .sidebar {
-            width: 100% !important; height: 60px !important;
-            top: auto !important; bottom: 0 !important;
-            flex-direction: row !important; border-right: none !important;
-            border-top: 1px solid var(--platinum-line);
-            border-radius: 15px 15px 0 0; padding: 0 !important;
-        }
-
-        .sidebar nav ul { 
-            display: flex !important; flex-direction: row !important; 
-            justify-content: space-around; align-items: center; height: 100%; 
-        }
-        .sidebar nav a { 
-            flex-direction: column !important; gap: 2px !important; 
-            font-size: 9px !important; padding: 5px !important; 
-        }
-        .main-content {
-            margin-left: 0 !important; width: 100% !important;
-            margin-bottom: 70px; padding: 15px;
-        }
-        footer.desktop-footer {
-            margin-left: 0 !important;
-            padding-bottom: 80px !important;
-        }
+    html {
+        font-size: 13px; /* Mengecilkan skala dasar font di HP */
     }
+
+    .topbar {
+        height: 55px !important; /* Memperkecil tinggi navbar atas */
+        padding: 0 15px !important;
+        justify-content: center; /* Mengetengahkan konten jika perlu */
+    }
+
+    /* Memperbaiki Logo yang bertabrakan di screenshot */
+    .main-logo-img {
+        height: 30px !important; 
+        width: auto;
+    }
+
+    /* Menghilangkan elemen desktop yang memakan tempat */
+    .topbar-title-desktop, .user-info, .tagline {
+        display: none !important;
+    }
+
+    /* Perbaikan Konten Utama agar tidak tenggelam atau terlalu lebar */
+    .main-content {
+        margin-left: 0 !important;
+        margin-top: 55px !important; /* Harus sama dengan tinggi topbar */
+        padding: 15px !important;
+        width: 100% !important;
+        margin-bottom: 70px !important; /* Memberi ruang untuk menu bawah */
+    }
+
+    /* Perbaikan Menu Navigasi Bawah (Floating Menu) */
+    .sidebar {
+        width: 90% !important; /* Tidak full agar terlihat melayang (opsional) */
+        left: 5% !important;
+        bottom: 15px !important;
+        height: 60px !important;
+        border-radius: 20px !important;
+        margin: 0 auto;
+        padding: 0 10px !important;
+        background: rgba(255, 255, 255, 0.95) !important;
+        box-shadow: 0 8px 32px rgba(0,0,0,0.1) !important;
+    }
+
+    .sidebar nav a {
+        padding: 5px !important;
+        gap: 2px !important;
+    }
+
+    .sidebar nav a i {
+        width: 18px !important;
+        height: 18px !important;
+    }
+
+    .sidebar nav a .label {
+        font-size: 9px !important;
+        display: block !important;
+    }
+}
 
     @yield('page_styles')
 </style>
