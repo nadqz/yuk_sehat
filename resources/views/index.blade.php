@@ -41,7 +41,7 @@
 
         /* NAVBAR */
         nav {
-            padding: 10px 8%;
+            padding: 15px 10%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -75,8 +75,8 @@
             gap: 60px;
             animation: fadeIn 1s ease-out;
         }
-        .hero-text h1 { font-size: 55px; font-weight: 800; line-height: 1.1; color: var(--emerald-deep); margin-bottom: 25px; }
-        .hero-text p { font-size: 16px; color: var(--text-muted); margin-bottom: 40px; max-width: 520px; }
+        .hero-text h1 { font-size: 45px; font-weight: 800; line-height: 1.1; color: var(--emerald-deep); margin-bottom: 25px; }
+        .hero-text p { font-size: 14px; color: var(--text-muted); margin-bottom: 40px; max-width: 520px; }
         
         .btn-primary { 
             background: var(--emerald-mid); 
@@ -117,7 +117,7 @@
 
         /* FEATURES SECTION */
         .features { padding: 120px 8%; background: white; text-align: center; }
-        .section-tag { color: var(--emerald-mid); font-weight: 800; text-transform: uppercase; font-size: 10px; letter-spacing: 2px; margin-bottom: 12px; display: block; }
+        .section-tag { color: var(--emerald-mid); font-weight: 800; text-transform: uppercase; font-size: 12px; letter-spacing: 2px; margin-bottom: 12px; display: block; }
         .features h2 { font-size: 32px; font-weight: 800; color: var(--emerald-deep); margin-bottom: 70px; }
         
         .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; }
@@ -183,11 +183,11 @@
             .nav-links a {
                 margin-left: 0;
                 margin: 0 10px;
-                font-size: 10px;
+                font-size: 12px;
             }
             .btn-login {
                 padding: 8px 18px;
-                font-size: 10px;
+                font-size: 12px;
             }
 
             /* Hero Section Mobile */
@@ -318,7 +318,7 @@
                 <img src="https://www.beliteweight.com/blog/wp-content/uploads/2024/03/BMI-calculator.jpg" class="feature-img" alt="BMI Scale">
                 <div class="icon-circle"><i data-lucide="scale"></i></div>
                 <h3>Analisis BMI</h3>
-                <p style="font-size: 10px;">Pantau komposisi tubuh secara berkala. Simpan riwayat berat badan Anda dan lihat grafiknya meningkat.</p>
+                <p style="font-size: 12px;">Pantau komposisi tubuh secara berkala. Simpan riwayat berat badan Anda dan lihat grafiknya meningkat.</p>
             </div>
             
             <div class="feature-card">
@@ -327,7 +327,7 @@
                 <img src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?auto=format&fit=crop&w=600&q=80" class="feature-img" alt="Running Shoes">
                 <div class="icon-circle"><i data-lucide="footprints"></i></div>
                 <h3>Jurnal Aktivitas</h3>
-                <p style="font-size: 10px;">Catat langkah kaki dan durasi olahraga. Bagikan progres harian Anda untuk menjaga motivasi tetap tinggi.</p>
+                <p style="font-size: 12px;">Catat langkah kaki dan durasi olahraga. Bagikan progres harian Anda untuk menjaga motivasi tetap tinggi.</p>
             </div>
 
             <div class="feature-card">
@@ -336,7 +336,7 @@
                 <img src="https://dr-owl.com/cdn/shop/articles/water-5767178_1920.png?v=1724325828" class="feature-img" alt="Hydration">
                 <div class="icon-circle"><i data-lucide="glass-water"></i></div>
                 <h3>Pantau Hidrasi</h3>
-                <p style="font-size: 10px;">Pastikan tubuh mendapatkan asupan air yang cukup. Log setiap gelas air yang Anda minum dengan satu sentuhan.</p>
+                <p style="font-size: 12px;">Pastikan tubuh mendapatkan asupan air yang cukup. Log setiap gelas air yang Anda minum dengan satu sentuhan.</p>
             </div>
         </div>
     </section>
@@ -350,15 +350,15 @@
         <div class="about-text">
             <span class="section-tag">Tentang Kami</span>
             <h2>Pendamping Digital Untuk Gaya Hidup Sehat.</h2>
-            <p style="font-size: 10px;">Kami percaya kesehatan dimulai dari konsistensi mencatat hal-hal kecil. Dengan <strong>Yuk Sehat!!</strong>, Anda tidak perlu lagi menebak-nebak progres kesehatan Anda.</p>
+            <p style="font-size: 12px;">Kami percaya kesehatan dimulai dari konsistensi mencatat hal-hal kecil. Dengan <strong>Yuk Sehat!!</strong>, Anda tidak perlu lagi menebak-nebak progres kesehatan Anda.</p>
             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 30px;">
                 <div>
                     <h4 style="color: var(--emerald-mid); font-size: 20px;">Simple</h4>
-                    <p style="font-size: 10px;">Input data hanya butuh waktu 30 detik.</p>
+                    <p style="font-size: 12px;">Input data hanya butuh waktu 30 detik.</p>
                 </div>
                 <div>
                     <h4 style="color: var(--emerald-mid); font-size: 20px;">Personal</h4>
-                    <p style="font-size: 10px;">Insight yang disesuaikan dengan kondisi tubuh Anda.</p>
+                    <p style="font-size: 12px;">Insight yang disesuaikan dengan kondisi tubuh Anda.</p>
                 </div>
             </div>
         </div>
@@ -366,14 +366,14 @@
 
     <footer>
         <h2 style="margin-bottom: 20px; font-size: 20px;">Yuk Sehat!!</h2>
-        <p style="opacity: 0.7; font-size: 12px;">Investasi terbaik bukan emas, tapi tubuh yang sehat.</p>
-        <div class="footer-links" style="font-size: 10px;">
+        <p style="opacity: 0.7; font-size: 16px;">Investasi terbaik bukan emas, tapi tubuh yang sehat.</p>
+        <div class="footer-links" style="font-size: 12px;">
             <a href="#fitur">Fitur</a>
             <a href="#tentang">Tentang Kami</a>
             <a href="/login">Dashboard</a>
             <a href="#">Privasi</a>
         </div>
-        <p style="font-size: 6px; opacity: 0.5; margin-top: 40px;">&copy; 2025 Yuk Sehat!! Digital Labs. Seluruh hak cipta dilindungi.</p>
+        <p style="font-size: 10px; opacity: 0.5; margin-top: 40px;">&copy; 2025 Yuk Sehat!! Digital Labs. Seluruh hak cipta dilindungi.</p>
     </footer>
 
     <script>
