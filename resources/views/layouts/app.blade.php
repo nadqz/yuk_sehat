@@ -97,7 +97,7 @@
             backdrop-filter: blur(var(--blur-strong));
             border-right: 1px solid var(--platinum-line);
             height: 100vh;
-            padding: 15px 25px;
+            padding: 15px 30px;
             position: fixed;
             left: 0; top: 0;
             display: flex;
@@ -137,7 +137,7 @@
         .sidebar nav li { margin-bottom: 12px; }
         .sidebar nav a { 
             text-decoration: none; font-size: 14px; font-weight: 500; 
-            padding: 12px 16px; border-radius: 14px; display: flex; 
+            padding: 12px 18px; border-radius: 14px; display: flex; 
             align-items: center; gap: 15px; color: var(--text-main); transition: 0.25s; 
         }
         .sidebar nav a:hover { background: rgba(207, 238, 228, 0.5); transform: translateX(5px); }
@@ -149,6 +149,7 @@
             width: 24px;
             height: 24px;
             transition: 0.3s;
+            padding-left: 7px;
         }
 
         /* Opsional: Jika ingin icon lebih kecil lagi saat sidebar dikolaps (collapsed) */
