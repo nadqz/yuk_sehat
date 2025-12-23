@@ -33,178 +33,173 @@
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
-        :root {
-            --bg-main: #f6f9f8;
-            --bg-soft: #fbfdfc;
-            --glass: rgba(255, 255, 255, 0.78);
-            --glass-strong: rgba(255, 255, 255, 0.94);
-            --emerald-soft: #cfeee4;
-            --emerald-mid: #a8d8c8;
-            --emerald-deep: #2f7f6a;
-            --platinum-line: #c7ccd3;
-            --text-main: #24332e;
-            --text-muted: #7d8c85;
-            --radius-xl: 22px;
-            --radius-lg: 18px;
-            --radius-md: 12px;
-            --shadow-soft: 0 12px 32px rgba(0, 0, 0, 0.06);
-            --shadow-subtle: 0 6px 20px rgba(0, 0, 0, 0.04);
-            --blur-strong: 22px;
-            --blur-soft: 14px;
-            --topbar-height: 77px;
-        }
+        :root {
+            --bg-main: #f6f9f8;
+            --bg-soft: #fbfdfc;
+            --glass: rgba(255, 255, 255, 0.78);
+            --glass-strong: rgba(255, 255, 255, 0.94);
+            --emerald-soft: #cfeee4;
+            --emerald-mid: #a8d8c8;
+            --emerald-deep: #2f7f6a;
+            --platinum-line: #c7ccd3;
+            --text-main: #24332e;
+            --text-muted: #7d8c85;
+            --radius-xl: 22px;
+            --radius-lg: 18px;
+            --radius-md: 12px;
+            --shadow-soft: 0 12px 32px rgba(0, 0, 0, 0.06);
+            --shadow-subtle: 0 6px 20px rgba(0, 0, 0, 0.04);
+            --blur-strong: 22px;
+            --blur-soft: 14px;
+            --topbar-height: 77px;
+        }
 
-        * { box-sizing: border-box; }
-        html {
-            -webkit-text-size-adjust: 100%; /* Mencegah font membesar otomatis di iPhone/Chrome */
-            font-size: 16px; /* Mengunci standar ukuran 1rem */
-        }
+        * { box-sizing: border-box; }
 
-        body {
-            margin: 0;
-            font-family: 'Poppins', sans-serif;
-            background: linear-gradient(180deg, #f8fbfa, #f3f7f6);
-            min-height: 100vh;
-            overflow-x: hidden;
-            color: var(--text-main);
-            max-width: 100vw;
-        }
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(180deg, #f8fbfa, #f3f7f6);
+            min-height: 100vh;
+            overflow-x: hidden;
+            color: var(--text-main);
+        }
 
-        .orb {
-            position: fixed; border-radius: 50%; filter: blur(40px);
-            opacity: 0.55; pointer-events: none; z-index: 0;
-        }
-        .orb1 { width: 260px; height: 260px; background: #d8f3ea; top: -80px; left: -40px; }
-        .orb2 { width: 320px; height: 320px; background: #e3f1ff; bottom: -120px; right: -60px; }
+        .orb {
+            position: fixed; border-radius: 50%; filter: blur(40px);
+            opacity: 0.55; pointer-events: none; z-index: 0;
+        }
+        .orb1 { width: 260px; height: 260px; background: #d8f3ea; top: -80px; left: -40px; }
+        .orb2 { width: 320px; height: 320px; background: #e3f1ff; bottom: -120px; right: -60px; }
 
-        /* TOPBAR - DIAM TOTAL (YouTube Style) */
-        .topbar {
-            background: var(--glass-strong); 
-            backdrop-filter: blur(var(--blur-soft));
-            border-bottom: 1px solid var(--platinum-line); 
-            width: 100% !important;
-            position: fixed; 
-            top: 0; left: 0 !important;
-            height: var(--topbar-height);
-            padding: 0 35px 0 100px; /* Padding kiri agar logo tak tertutup sidebar saat ciut */
-            display: flex; 
-            justify-content: space-between;
-            align-items: center; 
-            z-index: 90; /* Dibawah Sidebar */
-            transition: none !important; 
-        }
+        /* TOPBAR - DIAM TOTAL (YouTube Style) */
+        .topbar {
+            background: var(--glass-strong); 
+            backdrop-filter: blur(var(--blur-soft));
+            border-bottom: 1px solid var(--platinum-line); 
+            width: 100% !important;
+            position: fixed; 
+            top: 0; left: 0 !important;
+            height: var(--topbar-height);
+            padding: 0 35px 0 100px; /* Padding kiri agar logo tak tertutup sidebar saat ciut */
+            display: flex; 
+            justify-content: space-between;
+            align-items: center; 
+            z-index: 90; /* Dibawah Sidebar */
+            transition: none !important; 
+        }
 
-        /* SIDEBAR - LAPISAN TERATAS */
-        .sidebar {
-            width: 260px;
-            background: var(--glass-strong);
-            backdrop-filter: blur(var(--blur-strong));
-            border-right: 1px solid var(--platinum-line);
-            height: 100vh;
-            padding: 30px 20px;
-            position: fixed;
-            left: 0; top: 0;
-            display: flex;
-            flex-direction: column;
-            box-shadow: var(--shadow-soft);
-            transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            z-index: 100; /* Diatas Topbar */
-        }
+        /* SIDEBAR - LAPISAN TERATAS */
+        .sidebar {
+            width: 260px;
+            background: var(--glass-strong);
+            backdrop-filter: blur(var(--blur-strong));
+            border-right: 1px solid var(--platinum-line);
+            height: 100vh;
+            padding: 30px 20px;
+            position: fixed;
+            left: 0; top: 0;
+            display: flex;
+            flex-direction: column;
+            box-shadow: var(--shadow-soft);
+            transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            z-index: 100; /* Diatas Topbar */
+        }
 
-        .sidebar.collapsed { width: 88px; padding: 30px 15px; }
+        .sidebar.collapsed { width: 88px; padding: 30px 15px; }
 
-        .sidebar-header { 
-            display: flex; align-items: center; gap: 15px; margin-bottom: 40px; 
-            padding-bottom: 15px; border-bottom: 1px solid var(--platinum-line); 
-        }
+        .sidebar-header { 
+            display: flex; align-items: center; gap: 15px; margin-bottom: 40px; 
+            padding-bottom: 15px; border-bottom: 1px solid var(--platinum-line); 
+        }
 
-        .sidebar-logo { 
-            width: 50px; height: 50px; border-radius: 16px; 
-            background: linear-gradient(135deg, #fafffd, #cfeee4); 
-            display: flex; align-items: center; justify-content: center; 
-            font-weight: 700; color: var(--emerald-deep); font-size: 20px; 
-            box-shadow: var(--shadow-subtle); flex-shrink: 0;
-        }
+        .sidebar-logo { 
+            width: 50px; height: 50px; border-radius: 16px; 
+            background: linear-gradient(135deg, #fafffd, #cfeee4); 
+            display: flex; align-items: center; justify-content: center; 
+            font-weight: 700; color: var(--emerald-deep); font-size: 20px; 
+            box-shadow: var(--shadow-subtle); flex-shrink: 0;
+        }
 
-        .sidebar.collapsed .sidebar-title-box { display: none; }
+        .sidebar.collapsed .sidebar-title-box { display: none; }
 
-        .sidebar-toggle { 
-            position: absolute; top: 35px; right: -15px; 
-            width: 32px; height: 32px; border-radius: 50%; 
-            border: 1px solid var(--platinum-line); background: #ffffff; 
-            display: flex; align-items: center; justify-content: center; 
-            cursor: pointer; box-shadow: var(--shadow-subtle); z-index: 101;
-        }
+        .sidebar-toggle { 
+            position: absolute; top: 35px; right: -15px; 
+            width: 32px; height: 32px; border-radius: 50%; 
+            border: 1px solid var(--platinum-line); background: #ffffff; 
+            display: flex; align-items: center; justify-content: center; 
+            cursor: pointer; box-shadow: var(--shadow-subtle); z-index: 101;
+        }
 
-        /* NAVIGATION */
-        .sidebar nav ul { list-style: none; padding: 0; margin: 0; }
-        .sidebar nav li { margin-bottom: 12px; }
-        .sidebar nav a { 
-            text-decoration: none; font-size: 15px; font-weight: 500; 
-            padding: 12px 16px; border-radius: 14px; display: flex; 
-            align-items: center; gap: 15px; color: var(--text-main); transition: 0.25s; 
-        }
-        .sidebar nav a:hover { background: rgba(207, 238, 228, 0.5); transform: translateX(5px); }
-        .sidebar nav a.active { background: #cfeee4; color: var(--emerald-deep); font-weight: 600; }
-        
-        .sidebar.collapsed .label { display: none; }
+        /* NAVIGATION */
+        .sidebar nav ul { list-style: none; padding: 0; margin: 0; }
+        .sidebar nav li { margin-bottom: 12px; }
+        .sidebar nav a { 
+            text-decoration: none; font-size: 15px; font-weight: 500; 
+            padding: 12px 16px; border-radius: 14px; display: flex; 
+            align-items: center; gap: 15px; color: var(--text-main); transition: 0.25s; 
+        }
+        .sidebar nav a:hover { background: rgba(207, 238, 228, 0.5); transform: translateX(5px); }
+        .sidebar nav a.active { background: #cfeee4; color: var(--emerald-deep); font-weight: 600; }
+        
+        .sidebar.collapsed .label { display: none; }
 
-        /* MAIN CONTENT - BERGESER SINKRON DENGAN SIDEBAR */
-        .main-content {
-            margin-left: 260px; 
-            margin-top: var(--topbar-height); 
-            padding: 40px;
-            transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
-            position: relative; z-index: 1; 
-            width: calc(100% - 260px);
-        }
-        .main-content.collapsed { margin-left: 88px; width: calc(100% - 88px); }
-        .sidebar.collapsed ~ div footer.desktop-footer {
-            margin-left: 88px !important;
-        }
+        /* MAIN CONTENT - BERGESER SINKRON DENGAN SIDEBAR */
+        .main-content {
+            margin-left: 260px; 
+            margin-top: var(--topbar-height); 
+            padding: 40px;
+            transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1); 
+            position: relative; z-index: 1; 
+            width: calc(100% - 260px);
+        }
+        .main-content.collapsed { margin-left: 88px; width: calc(100% - 88px); }
+        .sidebar.collapsed ~ div footer.desktop-footer {
+            margin-left: 88px !important;
+        }
 
-        /* ========================================= */
-        /* --- RESPONSIVE MOBILE (BOTTOM MENU) ---   */
-        /* ========================================= */
-        @media (max-width: 768px) {
-            .topbar { padding: 0 20px !important; }
-            .sidebar-header, .sidebar-toggle { display: none !important; }
+        /* ========================================= */
+        /* --- RESPONSIVE MOBILE (BOTTOM MENU) ---   */
+        /* ========================================= */
+        @media (max-width: 768px) {
+            .topbar { padding: 0 20px !important; }
+            .sidebar-header, .sidebar-toggle { display: none !important; }
 
-            .sidebar {
-                width: 100% !important; height: 70px !important;
-                top: auto !important; bottom: 0 !important;
-                flex-direction: row !important; border-right: none !important;
-                border-top: 1px solid var(--platinum-line);
-                border-radius: 20px 20px 0 0; padding: 0 !important;
-            }
+            .sidebar {
+                width: 100% !important; height: 70px !important;
+                top: auto !important; bottom: 0 !important;
+                flex-direction: row !important; border-right: none !important;
+                border-top: 1px solid var(--platinum-line);
+                border-radius: 20px 20px 0 0; padding: 0 !important;
+            }
 
-            .sidebar nav { width: 100%; }
-            .sidebar nav ul { 
-                display: flex !important; flex-direction: row !important; 
-                justify-content: space-around; align-items: center; height: 100%; 
-            }
-            .sidebar nav li { margin-bottom: 0; }
-            .sidebar nav a { 
-                flex-direction: column !important; gap: 4px !important; 
-                font-size: 10px !important; padding: 8px !important; 
-            }
-            .sidebar nav a .label { display: block !important; }
-            .sidebar nav a:hover { transform: none; }
+            .sidebar nav { width: 100%; }
+            .sidebar nav ul { 
+                display: flex !important; flex-direction: row !important; 
+                justify-content: space-around; align-items: center; height: 100%; 
+            }
+            .sidebar nav li { margin-bottom: 0; }
+            .sidebar nav a { 
+                flex-direction: column !important; gap: 4px !important; 
+                font-size: 10px !important; padding: 8px !important; 
+            }
+            .sidebar nav a .label { display: block !important; }
+            .sidebar nav a:hover { transform: none; }
 
-            .main-content {
-                margin-left: 0 !important; width: 100% !important;
-                margin-bottom: 80px; padding: 20px;
-            }
+            .main-content {
+                margin-left: 0 !important; width: 100% !important;
+                margin-bottom: 80px; padding: 20px;
+            }
 
-            footer.desktop-footer {
-                margin-left: 0 !important;
-                padding-bottom: 90px !important; /* Jarak agar tidak tertutup menu mobile */
-            }
-            
-        }
+            footer.desktop-footer {
+                margin-left: 0 !important;
+                padding-bottom: 90px !important; /* Jarak agar tidak tertutup menu mobile */
+            }
+            
+        }
 
-        @yield('page_styles')
-    </style>
+        @yield('page_styles')
+    </style>
 </head>
 <body>
     <div class="orb orb1"></div>
