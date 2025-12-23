@@ -221,7 +221,7 @@
         display: none !important; /* Hilangkan teks di HP */
     }
 
-    .main-logo-img { height: 20px; }
+    .main-logo-img { height: 16px; }
 
     .user-info-trigger { gap: 0 !important; padding: 0 !important; }
 
