@@ -1,7 +1,7 @@
 <aside class="sidebar" id="sidebar">
-    <div class="sidebar-header" style="padding-bottom: 5px; overflow: hidden; white-space: nowrap;">
+    <div class="sidebar-header" style="padding-bottom: 10px; overflow: hidden; white-space: nowrap;">
         <a href="{{ route('dashboard') }}" style="text-decoration: none; display: flex; align-items: center; color: inherit;">
-            <div class="sidebar-logo-box" style="margin-left: 10px; flex-shrink: 0;">
+            <div class="sidebar-logo-box" style="margin-left: 25px; flex-shrink: 0;">
                 <img src="{{ secure_asset('assets/img/full-logo.png') }}" 
                      alt="Icon" 
                      style="width: auto; height: 40px; object-fit: contain;">
