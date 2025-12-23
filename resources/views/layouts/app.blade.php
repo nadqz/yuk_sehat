@@ -119,7 +119,7 @@
             background: linear-gradient(135deg, #fafffd, #cfeee4); 
             display: flex; align-items: center; justify-content: center; 
             font-weight: 700; color: var(--emerald-deep); 
-            box-shadow: var(--shadow-subtle); flex-shrink: 0; padding-left: 10px;
+            box-shadow: var(--shadow-subtle); flex-shrink: 0; padding-left: 20px;
         }
 
         .sidebar.collapsed .sidebar-title-box { display: none; }
@@ -146,8 +146,8 @@
         .sidebar.collapsed .label { display: none; }
 
         .sidebar nav a .icon svg {
-            width: 20px;
-            height: 20px;
+            width: 24px;
+            height: 24px;
             transition: 0.3s;
         }
 
