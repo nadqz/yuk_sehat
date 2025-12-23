@@ -92,12 +92,12 @@
 
         /* SIDEBAR - LAPISAN TERATAS */
         .sidebar {
-            width: 218px;
+            width: 220px;
             background: var(--glass-strong);
             backdrop-filter: blur(var(--blur-strong));
             border-right: 1px solid var(--platinum-line);
             height: 100vh;
-            padding: 15px 10px;
+            padding: 15px 20px;
             position: fixed;
             left: 0; top: 0;
             display: flex;
@@ -107,7 +107,7 @@
             z-index: 100; /* Diatas Topbar */
         }
 
-        .sidebar.collapsed { width: 78px; padding: 15px 10px;}
+        .sidebar.collapsed { width: 80px; padding: 15px 10px;}
 
         .sidebar-header { 
             display: flex; align-items: center; gap: 15px; margin-bottom: 40px; 
@@ -119,7 +119,7 @@
             background: linear-gradient(135deg, #fafffd, #cfeee4); 
             display: flex; align-items: center; justify-content: center; 
             font-weight: 700; color: var(--emerald-deep); 
-            box-shadow: var(--shadow-subtle); flex-shrink: 0; padding-left: 20px;
+            box-shadow: var(--shadow-subtle); flex-shrink: 0; padding-left: 30px;
         }
 
         .sidebar.collapsed .sidebar-title-box { display: none; }
@@ -136,7 +136,7 @@
         .sidebar nav ul { list-style: none; padding: 0; margin: 0; }
         .sidebar nav li { margin-bottom: 12px; }
         .sidebar nav a { 
-            text-decoration: none; font-size: 14px; font-weight: 500; 
+            text-decoration: none; font-size: 13px; font-weight: 500; 
             padding: 12px 18px; border-radius: 14px; display: flex; 
             align-items: center; gap: 15px; color: var(--text-main); transition: 0.25s; 
         }
@@ -145,11 +145,10 @@
         
         .sidebar.collapsed .label { display: none; }
 
-        .sidebar nav a .icon svg {
+        .sidebar .icon svg {
             width: 24px;
             height: 24px;
             transition: 0.3s;
-            padding-left: 10px;
         }
 
         /* Opsional: Jika ingin icon lebih kecil lagi saat sidebar dikolaps (collapsed) */
@@ -157,6 +156,7 @@
         .sidebar.collapsed .icon svg {
             width: 24px;
             height: 24px;
+            padding: 0;
         }
 
         /* MAIN CONTENT - BERGESER SINKRON DENGAN SIDEBAR */
