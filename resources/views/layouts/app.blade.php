@@ -119,7 +119,7 @@
             background: linear-gradient(135deg, #fafffd, #cfeee4); 
             display: flex; align-items: center; justify-content: center; 
             font-weight: 700; color: var(--emerald-deep); 
-            box-shadow: var(--shadow-subtle); flex-shrink: 0;
+            box-shadow: var(--shadow-subtle); flex-shrink: 0; padding-left: 10px;
         }
 
         .sidebar.collapsed .sidebar-title-box { display: none; }
@@ -136,7 +136,7 @@
         .sidebar nav ul { list-style: none; padding: 0; margin: 0; }
         .sidebar nav li { margin-bottom: 12px; }
         .sidebar nav a { 
-            text-decoration: none; font-size: 12px; font-weight: 500; 
+            text-decoration: none; font-size: 14px; font-weight: 500; 
             padding: 12px 16px; border-radius: 14px; display: flex; 
             align-items: center; gap: 15px; color: var(--text-main); transition: 0.25s; 
         }
@@ -146,8 +146,8 @@
         .sidebar.collapsed .label { display: none; }
 
         .sidebar nav a .icon svg {
-            width: 16px;
-            height: 16px;
+            width: 20px;
+            height: 20px;
             transition: 0.3s;
         }
 
