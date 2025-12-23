@@ -92,12 +92,12 @@
 
         /* SIDEBAR - LAPISAN TERATAS */
         .sidebar {
-            width: 200px;
+            width: 180px;
             background: var(--glass-strong);
             backdrop-filter: blur(var(--blur-strong));
             border-right: 1px solid var(--platinum-line);
             height: 100vh;
-            padding: 30px 20px;
+            padding: 15px 25px;
             position: fixed;
             left: 0; top: 0;
             display: flex;
@@ -123,6 +123,10 @@
         }
 
         .sidebar.collapsed .sidebar-title-box { display: none; }
+        .sidebar.collapsed { 
+            width: 60px; 
+            padding: 30px 10px; /* Padding dikurangi agar icon tetap di tengah */
+        }
 
         .sidebar-toggle { 
             position: absolute; top: 35px; right: -15px; 
