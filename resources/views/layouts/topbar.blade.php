@@ -7,13 +7,14 @@
                 {{-- DIUBAH: Menggunakan secure_asset agar logo muncul di jalur HTTPS --}}
                 <img src="{{ secure_asset('assets/img/full-logo.png') }}" 
                      alt="Logo Yuk Sehat" 
-                     class="main-logo-img">
+                     class="main-logo-img"
+                     style="height: 50px; width: auto; object-fit: contain;">
             </div>
 
             {{-- Judul Halaman --}}
             <div class="topbar-title-desktop">
                 <div class="title-wrapper">
-                    <h1 class="main-page-title">@yield('title')</h1>
+                    <h3 class="main-page-title">@yield('title')</h3>
                     <span class="sub-page-title">Panel Kesehatan</span>
                 </div>
             </div>
