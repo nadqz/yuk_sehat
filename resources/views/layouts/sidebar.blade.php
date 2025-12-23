@@ -4,7 +4,7 @@
             <div class="sidebar-logo-box" style="margin-left: 10px; flex-shrink: 0;">
                 <img src="{{ secure_asset('assets/img/full-logo.png') }}" 
                      alt="Icon" 
-                     style="width: auto; height: 50px; object-fit: contain;">
+                     style="width: auto; height: 35px; object-fit: contain;">
             </div>
         </a>
     </div>
