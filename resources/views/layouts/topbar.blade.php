@@ -3,7 +3,7 @@
         <a href="{{ route('dashboard') }}" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 15px;">
             
             {{-- Area Logo --}}
-            <div class="topbar-logo-mobile" style="margin-top: 10px;">
+            <div class="topbar-logo-mobile">
                 {{-- DIUBAH: Menggunakan secure_asset agar logo muncul di jalur HTTPS --}}
                 <img src="{{ secure_asset('assets/img/full-logo.png') }}" 
                      alt="Logo Yuk Sehat" 
@@ -37,7 +37,7 @@
             <a href="{{ route('profile.edit') }}" class="dropdown-item">
                 <div class="item-content">
                     <span class="item-icon">
-                        <i data-lucide="settings" style="width: 20px; color: var(--emerald-deep);"></i>
+                        <i data-lucide="settings" style="width: 18px; color: var(--emerald-deep);"></i>
                     </span>
                     <div class="item-text">
                         <span class="item-title">Pengaturan Profil</span>
@@ -57,8 +57,8 @@
                 onmouseover="this.style.background='#fff1f2'" 
                 onmouseout="this.style.background='transparent'">
                 <div style="display: flex; align-items: left; gap: 10px;">
-                    <i data-lucide="log-out" style="width: 18px;"></i>
-                    <span>Log Out</span>
+                    <i data-lucide="log-out" style="width: 14px;"></i>
+                    <span class="logout-text" style="font-size: 12px;">Log Out</span>
                 </div>
             </a>
         </div>
@@ -67,7 +67,7 @@
 
 <style>
     .topbar {
-        height: 100px !important;
+        height: 70px !important;
         width: 100%; 
         position: fixed;
         top: 0;
@@ -118,18 +118,18 @@
         gap: 15px;
     }
     
-    .item-icon { font-size: 20px; }
+    .item-icon { font-size: 16px; }
     
     .item-text { display: flex; flex-direction: column; }
     
     .item-title {
-        font-size: 14px;
+        font-size: 12px;
         font-weight: 600;
         color: var(--text-main);
     }
     
     .item-sub {
-        font-size: 11px;
+        font-size: 10px;
         color: var(--text-muted);
     }
 
@@ -160,7 +160,7 @@
 }
 
 .sub-page-title {
-    font-size: 11px; 
+    font-size: 10px; 
     color: var(--text-muted); 
     font-weight: 500; 
     text-transform: uppercase;
@@ -179,13 +179,13 @@
 }
 
 .user-info { display: flex; flex-direction: column; align-items: flex-end; }
-.user-info .name { font-size: 16px; font-weight: 600; color: var(--text-main); }
-.user-info .tagline { font-size: 12px; color: var(--text-muted); }
+.user-info .name { font-size: 14px; font-weight: 600; color: var(--text-main); }
+.user-info .tagline { font-size: 10px; color: var(--text-muted); }
 
 .user-avatar {
-    width: 48px; height: 48px; border-radius: 50%;
+    width: 36px; height: 36px; border-radius: 50%;
     background: #cfeee4; display: flex; align-items: center;
-    justify-content: center; font-weight: 700; font-size: 18px;
+    justify-content: center; font-weight: 700; font-size: 16px;
     border: 2px solid var(--platinum-line); box-shadow: var(--shadow-subtle);
     color: var(--emerald-deep);
 }
