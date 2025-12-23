@@ -119,7 +119,7 @@
             background: linear-gradient(135deg, #fafffd, #cfeee4); 
             display: flex; align-items: center; justify-content: center; 
             font-weight: 700; color: var(--emerald-deep); 
-            box-shadow: var(--shadow-subtle); flex-shrink: 0; padding-left: 30px;
+            box-shadow: var(--shadow-subtle); flex-shrink: 0;
         }
 
         .sidebar.collapsed .sidebar-title-box { display: none; }
@@ -136,7 +136,7 @@
         .sidebar nav ul { list-style: none; padding: 0; margin: 0; }
         .sidebar nav li { margin-bottom: 12px; }
         .sidebar nav a { 
-            text-decoration: none; font-size: 13px; font-weight: 500; 
+            text-decoration: none; font-size: 12px; font-weight: 500; 
             padding: 12px 18px; border-radius: 14px; display: flex; 
             align-items: center; gap: 15px; color: var(--text-main); transition: 0.25s; 
         }
