@@ -2,7 +2,7 @@
     <div class="sidebar-header" style="padding-bottom: 12px; overflow: hidden; white-space: nowrap;">
         <a href="{{ route('dashboard') }}" style="text-decoration: none; display: flex; align-items: center; color: inherit;">
             <div class="sidebar-logo-box" style="margin-left: 10px; flex-shrink: 0;">
-                <img src="{{ asset('assets/img/full-logo.png') }}" 
+                <img src="{{ secure_asset('assets/img/full-logo.png') }}" 
                      alt="Icon" 
                      style="width: auto; height: 50px; object-fit: contain;">
             </div>
