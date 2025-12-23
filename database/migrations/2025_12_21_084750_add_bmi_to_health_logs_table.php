@@ -11,16 +11,17 @@ return new class extends Migration
      */
     public function up()
     {
-        // Bungkus SEMUA modifikasi ke dalam pengecekan ini
         if (Schema::hasTable('health_logs')) {
             Schema::table('health_logs', function (Blueprint $table) {
-                // Cek dulu apakah kolom 'bmi' sudah ada atau belum sebelum ditambah
+                // Tambahkan kolom hanya jika belum ada
                 if (!Schema::hasColumn('health_logs', 'bmi')) {
                     $table->decimal('bmi', 8, 2)->nullable()->after('weight');
                 }
-                
+                if (!Schema::hasColumn('health_logs', 'bmi_score')) {
+                    $table->decimal('bmi_score', 5, 2)->nullable();
+                }
+                // Mengubah kolom weight yang sudah ada
                 $table->decimal('weight', 5, 2)->nullable()->change();
-                $table->decimal('bmi_score', 5, 2)->nullable();
             });
         }
     }
