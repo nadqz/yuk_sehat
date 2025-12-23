@@ -145,6 +145,19 @@
         
         .sidebar.collapsed .label { display: none; }
 
+        .sidebar nav a .icon svg {
+            width: 16px;
+            height: 16px;
+            transition: 0.3s;
+        }
+
+        /* Opsional: Jika ingin icon lebih kecil lagi saat sidebar dikolaps (collapsed) */
+        .sidebar.collapsed nav a .icon i,
+        .sidebar.collapsed nav a .icon svg {
+            width: 18px;
+            height: 18px;
+        }
+
         /* MAIN CONTENT - BERGESER SINKRON DENGAN SIDEBAR */
         .main-content {
             margin-left: 260px; 
