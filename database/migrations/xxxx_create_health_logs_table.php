@@ -15,18 +15,23 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
 
-            // Body
+            // Body (Fisik)
             $table->integer('steps')->nullable();
             $table->integer('exercise_minutes')->nullable();
             $table->integer('water_intake')->nullable();
+            
+            // Penambahan Kolom Baru (Agar sinkron dengan Form Input)
+            // decimal(5,2) mendukung angka seperti 120.50
+            $table->decimal('weight', 5, 2)->nullable(); 
+            $table->decimal('bmi_score', 5, 2)->nullable();
 
-            // Mind
+            // Mind (Mental)
             $table->string('mood')->nullable();
             $table->integer('stress_level')->nullable();
             $table->integer('focus_level')->nullable();
             $table->text('gratitude_note')->nullable();
 
-            // Rest
+            // Rest (Istirahat)
             $table->time('sleep_time')->nullable();
             $table->time('wake_time')->nullable();
             $table->string('sleep_quality')->nullable();
