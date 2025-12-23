@@ -55,6 +55,10 @@
         }
 
         * { box-sizing: border-box; }
+        html {
+            -webkit-text-size-adjust: 100%; /* Mencegah font membesar otomatis di iPhone/Chrome */
+            font-size: 16px; /* Mengunci standar ukuran 1rem */
+        }
 
         body {
             margin: 0;
@@ -63,6 +67,7 @@
             min-height: 100vh;
             overflow-x: hidden;
             color: var(--text-main);
+            max-width: 100vw;
         }
 
         .orb {
