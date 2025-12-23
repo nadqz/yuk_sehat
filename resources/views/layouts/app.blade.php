@@ -97,7 +97,7 @@
             backdrop-filter: blur(var(--blur-strong));
             border-right: 1px solid var(--platinum-line);
             height: 100vh;
-            padding: 15px 30px;
+            padding: 15px 10px;
             position: fixed;
             left: 0; top: 0;
             display: flex;
@@ -149,14 +149,14 @@
             width: 24px;
             height: 24px;
             transition: 0.3s;
-            padding-left: 7px;
+            padding-left: 10px;
         }
 
         /* Opsional: Jika ingin icon lebih kecil lagi saat sidebar dikolaps (collapsed) */
-        .sidebar.collapsed nav a .icon i,
-        .sidebar.collapsed nav a .icon svg {
-            width: 20px;
-            height: 20px;
+        .sidebar.collapsed .icon i,
+        .sidebar.collapsed .icon svg {
+            width: 24px;
+            height: 24px;
         }
 
         /* MAIN CONTENT - BERGESER SINKRON DENGAN SIDEBAR */
