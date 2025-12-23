@@ -11,11 +11,18 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('health_logs', function (Blueprint $table) {
-            // decimal(5,2) artinya maksimal 3 digit di depan koma dan 2 digit di belakang (Contoh: 125.50)
-            $table->decimal('weight', 5, 2)->nullable();
-            $table->decimal('bmi_score', 5, 2)->nullable();
-        });
+        // Bungkus SEMUA modifikasi ke dalam pengecekan ini
+        if (Schema::hasTable('health_logs')) {
+            Schema::table('health_logs', function (Blueprint $table) {
+                // Cek dulu apakah kolom 'bmi' sudah ada atau belum sebelum ditambah
+                if (!Schema::hasColumn('health_logs', 'bmi')) {
+                    $table->decimal('bmi', 8, 2)->nullable()->after('weight');
+                }
+                
+                $table->decimal('weight', 5, 2)->nullable()->change();
+                $table->decimal('bmi_score', 5, 2)->nullable();
+            });
+        }
     }
 
     /**
