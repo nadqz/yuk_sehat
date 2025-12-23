@@ -5,13 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <link rel="manifest" href="{{ secure_asset('manifest.json') }}">
+    <link rel="manifest" href="{{ secure_asset('manifest.json') }}" crossorigin="use-credentials">
 
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="YukSehat">
     
-   {{-- Icon standar untuk Tab Browser --}}
+    {{-- Icon standar untuk Tab Browser --}}
     <link rel="icon" type="image/x-icon" href="{{ secure_asset('assets/img/favicon.ico') }}">
     
     {{-- Icon untuk perangkat Apple (iPhone/iPad) --}}
@@ -21,6 +21,8 @@
     <link rel="icon" type="image/png" sizes="192x192" href="{{ secure_asset('assets/img/icon-192.png') }}">
 
     <meta name="theme-color" content="#2f7f6a">
+    <meta name="msapplication-navbutton-color" content="#2f7f6a">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#2f7f6a">
 
     <title>@yield('title', 'Yuk Sehat!!')</title>
 
