@@ -97,7 +97,7 @@
             backdrop-filter: blur(var(--blur-strong));
             border-right: 1px solid var(--platinum-line);
             height: 100vh;
-            padding: 10px 20px;
+            padding: 15px 20px;
             position: fixed;
             left: 0; top: 0;
             display: flex;
