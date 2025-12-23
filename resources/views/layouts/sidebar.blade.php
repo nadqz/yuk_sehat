@@ -1,45 +1,101 @@
 <aside class="sidebar" id="sidebar">
-    <div class="sidebar-header" style="padding-bottom: 10px; overflow: hidden; white-space: nowrap; border-bottom: 1px solid var(--platinum-line); margin-bottom: 20px;">
+
+    <div class="sidebar-header" style="padding-bottom: 12px; overflow: hidden; white-space: nowrap;">
+
         <a href="{{ route('dashboard') }}" style="text-decoration: none; display: flex; align-items: center; color: inherit;">
-            <div class="sidebar-logo-box" style="margin-left: 5px; flex-shrink: 0;">
-                {{-- Ukuran logo diperkecil dari 50px ke 38px --}}
+
+            <div class="sidebar-logo-box" style="margin-left: 10px; flex-shrink: 0;">
+
                 <img src="{{ secure_asset('assets/img/full-logo.png') }}" 
+
                      alt="Icon" 
-                     style="width: auto; height: 38px; object-fit: contain;">
+
+                     style="width: auto; height: 50px; object-fit: contain;">
+
             </div>
+
         </a>
+
     </div>
 
+
+
     {{-- Tombol Toggle Desktop --}}
+
     <button class="sidebar-toggle" id="sidebarToggle">
-        <span id="toggleIcon" style="font-size: 10px;">⮜</span>
+
+        <span id="toggleIcon">⮜</span>
+
     </button>
 
-    <nav>
-        <ul style="list-style: none; padding: 0; margin: 0;">
-            @php
-                $menus = [
-                    ['route' => 'dashboard', 'icon' => 'layout-dashboard', 'label' => 'Dashboard'],
-                    ['route' => 'journal', 'icon' => 'book-open', 'label' => 'Journal'],
-                    ['route' => 'bmi', 'icon' => 'activity', 'label' => 'BMI Calculator'],
-                    ['route' => 'input.data', 'icon' => 'plus-circle', 'label' => 'Input Data'],
-                    ['route' => 'tips', 'icon' => 'lightbulb', 'label' => 'Wellness Tips'],
-                ];
-            @endphp
 
-            @foreach($menus as $menu)
-            <li style="margin-bottom: 5px;">
-                <a href="{{ route($menu['route']) }}" 
-                   class="{{ request()->routeIs($menu['route']) ? 'active' : '' }}"
-                   style="display: flex; align-items: center; gap: 12px; padding: 10px 14px; text-decoration: none; border-radius: 10px; font-size: 0.9rem;">
-                    <span class="icon" style="display: flex; align-items: center;">
-                        {{-- Ukuran icon lucide disesuaikan --}}
-                        <i data-lucide="{{ $menu['icon'] }}" style="width: 18px; height: 18px;"></i>
-                    </span>
-                    <span class="label">{{ $menu['label'] }}</span>
+
+    <nav>
+
+        <ul>
+
+            <li>
+
+                <a href="{{ route('dashboard') }}" class="{{ request()->routeIs('dashboard') ? 'active' : '' }}">
+
+                    <span class="icon"><i data-lucide="layout-dashboard"></i></span>
+
+                    <span class="label">Dashboard</span>
+
                 </a>
+
             </li>
-            @endforeach
+
+            <li>
+
+                <a href="{{ route('journal') }}" class="{{ request()->routeIs('journal') ? 'active' : '' }}">
+
+                    <span class="icon"><i data-lucide="book-open"></i></span>
+
+                    <span class="label">Journal</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="{{ route('bmi') }}" class="{{ request()->routeIs('bmi') ? 'active' : '' }}">
+
+                    <span class="icon"><i data-lucide="activity"></i></span>
+
+                    <span class="label">BMI Calculator</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="{{ route('input.data') }}" class="{{ request()->routeIs('input.data') ? 'active' : '' }}">
+
+                    <span class="icon"><i data-lucide="plus-circle"></i></span>
+
+                    <span class="label">Input Data</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="{{ route('tips') }}" class="{{ request()->routeIs('tips') ? 'active' : '' }}">
+
+                    <span class="icon"><i data-lucide="lightbulb"></i></span>
+
+                    <span class="label">Wellness Tips</span>
+
+                </a>
+
+            </li>
+
         </ul>
+
     </nav>
+
 </aside>
