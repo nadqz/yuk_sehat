@@ -7,9 +7,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     
-    <link rel="icon" type="image/x-icon" href="{{ secure_asset('assets/img/favicon.ico') }}">
-    <link rel="icon" type="image/png" sizes="192x192" href="{{ secure_asset('assets/img/icon-192.png') }}">
-    <link rel="apple-touch-icon" href="{{ secure_asset('assets/img/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/x-icon" href="{{ secure_asset('assets/img/favicon.ico') }}?v=1">
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ secure_asset('assets/img/icon-192.png') }}?v=1">
+    <link rel="apple-touch-icon" href="{{ secure_asset('assets/img/apple-touch-icon.png') }}?v=1">
     <link rel="manifest" href="{{ secure_asset('manifest.json') }}">
     <meta name="theme-color" content="#2f7f6a">
     
