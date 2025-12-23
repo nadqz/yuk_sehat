@@ -92,7 +92,7 @@
 
         /* SIDEBAR - LAPISAN TERATAS */
         .sidebar {
-            width: 220px;
+            width: 200px;
             background: var(--glass-strong);
             backdrop-filter: blur(var(--blur-strong));
             border-right: 1px solid var(--platinum-line);
@@ -115,7 +115,7 @@
         }
 
         .sidebar-logo { 
-            width: 50px; height: 50px; border-radius: 16px; 
+            width: auto; height: 35px; border-radius: 16px; 
             background: linear-gradient(135deg, #fafffd, #cfeee4); 
             display: flex; align-items: center; justify-content: center; 
             font-weight: 700; color: var(--emerald-deep); 
