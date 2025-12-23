@@ -23,124 +23,88 @@
         --text-muted: #64748b;
     }
 
-    html { scroll-behavior: smooth; font-size: 15px; } /* Mengecilkan skala dasar */
+    html { scroll-behavior: smooth; font-size: 14px; } /* Skala dasar dikecilkan sedikit */
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: var(--platinum); color: var(--text-main); line-height: 1.5; overflow-x: hidden; }
 
-    /* NAVBAR RAMPING */
+    /* NAVBAR - Dibuat lebih ramping */
     nav {
-        padding: 15px 5%; /* Dikurangi dari 20px 8% */
+        padding: 12px 5%; 
         display: flex;
         justify-content: space-between;
         align-items: center;
         position: sticky;
         top: 0;
         background: rgba(248, 250, 252, 0.9);
-        backdrop-filter: blur(10px);
+        backdrop-filter: blur(15px);
         z-index: 1000;
         border-bottom: 1px solid rgba(0,0,0,0.05);
     }
-    .logo img { height: 32px; transition: 0.3s; } /* Logo lebih proporsional */
-    .nav-links a { text-decoration: none; color: var(--text-main); font-weight: 600; margin-left: 25px; font-size: 13px; transition: 0.3s; }
-    
-    .btn-login {
-        background: var(--emerald-deep);
-        color: white !important;
-        padding: 10px 20px;
-        border-radius: 10px;
-        font-size: 13px;
-    }
+    .logo img { height: 35px; } 
 
-    /* HERO SECTION - PERBAIKAN SKALA */
+    /* HERO SECTION - Mengecilkan Font & Spasi */
     .hero {
-        padding: 60px 5% 100px;
-        max-width: 1200px; /* Membatasi agar tidak terlalu lebar di monitor besar */
-        margin: 0 auto;
+        padding: 60px 8% 80px; /* Padding dikurangi */
         display: grid;
-        grid-template-columns: 1.1fr 0.9fr;
+        grid-template-columns: 1fr 1fr;
         align-items: center;
-        gap: 40px;
+        gap: 40px; /* Jarak antar elemen dirapatkan */
     }
     .hero-text h1 { 
-        font-size: 48px; /* Turun dari 64px */
+        font-size: 42px; /* Dari 64px dikecilkan agar tidak 'meledak' */
         font-weight: 800; 
-        line-height: 1.1; 
+        line-height: 1.2; 
         color: var(--emerald-deep); 
         margin-bottom: 20px; 
-        letter-spacing: -1px;
     }
-    .hero-text p { font-size: 17px; color: var(--text-muted); margin-bottom: 30px; max-width: 480px; }
+    .hero-text p { font-size: 16px; color: var(--text-muted); margin-bottom: 30px; max-width: 500px; }
     
     .btn-primary { 
-        background: var(--emerald-mid); 
-        color: white; 
-        padding: 16px 32px; 
-        border-radius: 12px; 
-        text-decoration: none; 
-        font-weight: 700; 
+        padding: 15px 32px; /* Ukuran tombol lebih manusiawi */
         font-size: 15px;
-        display: inline-block;
     }
 
+    /* MOCKUP & FLOATING CARDS */
     .main-mockup {
         width: 100%;
-        border-radius: 25px; /* Lebih halus */
-        box-shadow: 0 30px 60px rgba(0,0,0,0.08);
+        border-radius: 30px;
+        box-shadow: 0 25px 50px rgba(0,0,0,0.08);
     }
-    
-    /* Floating Cards - Dikecilkan */
     .floating-card {
-        position: absolute;
-        background: white;
-        padding: 10px 15px;
+        padding: 10px 15px; /* Lebih kecil */
         border-radius: 15px;
-        box-shadow: 0 15px 30px rgba(0,0,0,0.06);
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        z-index: 2;
     }
-    .floating-card strong { font-size: 13px; }
-    .floating-card small { font-size: 11px; }
 
-    /* FEATURES */
-    .features { padding: 80px 5%; background: white; text-align: center; }
+    /* FEATURES - Lebih Padat */
+    .features { padding: 80px 8%; }
     .features h2 { font-size: 32px; margin-bottom: 50px; }
-    
-    .feature-grid { 
-        display: grid; 
-        grid-template-columns: repeat(3, 1fr); 
-        gap: 25px; 
-        max-width: 1100px; 
-        margin: 0 auto; 
-    }
+    .feature-grid { gap: 25px; } /* Jarak antar kartu dipersempit */
     .feature-card { padding: 30px; border-radius: 25px; }
+    .feature-img { height: 150px; } /* Tinggi gambar di kartu dikecilkan */
 
-    /* RESPONSIVE MOBILE - PERBAIKAN TOTAL */
+    /* RESPONSIVE MOBILE - MEMPERBAIKI TAMPILAN HANCUR */
     @media (max-width: 768px) {
-        nav { padding: 10px 20px; flex-direction: row; }
-        .nav-links { display: none; } /* Sembunyikan link di mobile agar tidak berantakan */
-        
+        nav { 
+            padding: 10px 5%; 
+            flex-direction: row; /* Tetap satu baris agar tidak hancur */
+        }
+        .nav-links a { margin-left: 15px; font-size: 12px; }
+        .nav-links a:not(.btn-login) { display: none; } /* Sembunyikan link biasa, sisakan tombol masuk */
+
         .hero {
-            padding: 40px 20px;
-            grid-template-columns: 1fr;
+            padding: 40px 5%;
+            grid-template-columns: 1fr; /* Tumpuk satu kolom */
             text-align: center;
         }
-        .hero-text h1 { font-size: 32px; }
-        .hero-text p { font-size: 15px; margin: 0 auto 25px; }
-        .btn-primary { width: 100%; padding: 14px; }
-
-        .hero-image { order: -1; margin-bottom: 20px; } /* Gambar pindah ke atas di HP */
-        .f-1, .f-2 { display: none; } /* Sembunyikan kartu melayang di HP agar bersih */
+        .hero-text h1 { font-size: 30px; }
+        .hero-text p { margin: 0 auto 25px; font-size: 14px; }
+        .hero-image { order: -1; } /* Gambar di atas teks */
+        
+        .f-1, .f-2 { display: none; } /* Sembunyikan elemen melayang agar tidak menutupi teks */
 
         .feature-grid { grid-template-columns: 1fr; }
-        .feature-card { padding: 25px; }
-        
-        .about { 
-            grid-template-columns: 1fr; 
-            padding: 50px 20px;
-            text-align: center;
-        }
+        .about { grid-template-columns: 1fr; gap: 30px; text-align: center; }
+        .about-text h2 { font-size: 28px; }
     }
 </style>
 </head>
