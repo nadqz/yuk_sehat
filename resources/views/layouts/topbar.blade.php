@@ -8,13 +8,13 @@
                 <img src="{{ secure_asset('assets/img/full-logo.png') }}" 
                      alt="Logo Yuk Sehat" 
                      class="main-logo-img"
-                     style="height: 50px; width: auto; object-fit: contain;">
+                     style="height: 25px; width: auto; object-fit: contain;">
             </div>
 
             {{-- Judul Halaman --}}
             <div class="topbar-title-desktop">
                 <div class="title-wrapper">
-                    <h3 class="main-page-title">@yield('title')</h3>
+                    <h4 class="main-page-title">@yield('title')</h4>
                     <span class="sub-page-title">Panel Kesehatan</span>
                 </div>
             </div>
