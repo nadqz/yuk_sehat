@@ -92,7 +92,7 @@
 
         /* SIDEBAR - LAPISAN TERATAS */
         .sidebar {
-            width: 180px;
+            width: 218px;
             background: var(--glass-strong);
             backdrop-filter: blur(var(--blur-strong));
             border-right: 1px solid var(--platinum-line);
@@ -107,7 +107,7 @@
             z-index: 100; /* Diatas Topbar */
         }
 
-        .sidebar.collapsed { width: 88px; padding: 30px 15px; }
+        .sidebar.collapsed { width: 78px; padding: 15px 25px; }
 
         .sidebar-header { 
             display: flex; align-items: center; gap: 15px; margin-bottom: 40px; 
@@ -123,10 +123,6 @@
         }
 
         .sidebar.collapsed .sidebar-title-box { display: none; }
-        .sidebar.collapsed { 
-            width: 60px; 
-            padding: 30px 10px; /* Padding dikurangi agar icon tetap di tengah */
-        }
 
         .sidebar-toggle { 
             position: absolute; top: 35px; right: -15px; 
