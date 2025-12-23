@@ -367,13 +367,13 @@
     <footer>
         <h2 style="margin-bottom: 20px; font-size: 20px;">Yuk Sehat!!</h2>
         <p style="opacity: 0.7; font-size: 14px;">Investasi terbaik bukan emas, tapi tubuh yang sehat.</p>
-        <div class="footer-links" style="font-size: 13px;">
+        <div class="footer-links" style="font-size: 12px;">
             <a href="#fitur">Fitur</a>
             <a href="#tentang">Tentang Kami</a>
             <a href="/login">Dashboard</a>
             <a href="#">Privasi</a>
         </div>
-        <p style="font-size: 12px; opacity: 0.5; margin-top: 40px;">&copy; 2025 Yuk Sehat!! Digital Labs. Seluruh hak cipta dilindungi.</p>
+        <p style="font-size: 10px; opacity: 0.5; margin-top: 40px;">&copy; 2025 Yuk Sehat!! Digital Labs. Seluruh hak cipta dilindungi.</p>
     </footer>
 
     <script>
