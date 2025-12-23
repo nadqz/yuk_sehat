@@ -19,8 +19,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        // Gunakan URL::forceRootUrl agar semua link form mengarah ke domain https kamu
         if (config('app.env') === 'production') {
             \URL::forceScheme('https');
+            \URL::forceRootUrl(config('app.url'));
         }
     }
 }
