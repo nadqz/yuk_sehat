@@ -55,10 +55,6 @@
         }
 
         * { box-sizing: border-box; }
-        html {
-            -webkit-text-size-adjust: 100%; /* Mencegah font membesar otomatis di iPhone/Chrome */
-            font-size: 16px; /* Mengunci standar ukuran 1rem */
-        }
 
         body {
             margin: 0;
@@ -67,7 +63,7 @@
             min-height: 100vh;
             overflow-x: hidden;
             color: var(--text-main);
-            max-width: 100vw;
+
         }
 
         .orb {
@@ -96,7 +92,7 @@
 
         /* SIDEBAR - LAPISAN TERATAS */
         .sidebar {
-            width: 260px;
+            width: 220px;
             background: var(--glass-strong);
             backdrop-filter: blur(var(--blur-strong));
             border-right: 1px solid var(--platinum-line);
@@ -122,7 +118,7 @@
             width: 50px; height: 50px; border-radius: 16px; 
             background: linear-gradient(135deg, #fafffd, #cfeee4); 
             display: flex; align-items: center; justify-content: center; 
-            font-weight: 700; color: var(--emerald-deep); font-size: 20px; 
+            font-weight: 700; color: var(--emerald-deep); 
             box-shadow: var(--shadow-subtle); flex-shrink: 0;
         }
 
@@ -140,7 +136,7 @@
         .sidebar nav ul { list-style: none; padding: 0; margin: 0; }
         .sidebar nav li { margin-bottom: 12px; }
         .sidebar nav a { 
-            text-decoration: none; font-size: 15px; font-weight: 500; 
+            text-decoration: none; font-size: 12px; font-weight: 500; 
             padding: 12px 16px; border-radius: 14px; display: flex; 
             align-items: center; gap: 15px; color: var(--text-main); transition: 0.25s; 
         }
@@ -171,7 +167,7 @@
             .sidebar-header, .sidebar-toggle { display: none !important; }
 
             .sidebar {
-                width: 100% !important; height: 70px !important;
+                width: 100% !important; height: 60px !important;
                 top: auto !important; bottom: 0 !important;
                 flex-direction: row !important; border-right: none !important;
                 border-top: 1px solid var(--platinum-line);
@@ -185,8 +181,8 @@
             }
             .sidebar nav li { margin-bottom: 0; }
             .sidebar nav a { 
-                flex-direction: column !important; gap: 4px !important; 
-                font-size: 10px !important; padding: 8px !important; 
+                flex-direction: column !important; gap: 2px !important; 
+                font-size: 10px !important; padding: 10px !important; 
             }
             .sidebar nav a .label { display: block !important; }
             .sidebar nav a:hover { transform: none; }
