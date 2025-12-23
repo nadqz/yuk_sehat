@@ -114,14 +114,6 @@
             padding-bottom: 15px; border-bottom: 1px solid var(--platinum-line); 
         }
 
-        .sidebar-logo { 
-            width: auto; height: 35px; border-radius: 16px; 
-            background: linear-gradient(135deg, #fafffd, #cfeee4); 
-            display: flex; align-items: center; justify-content: center; 
-            font-weight: 700; color: var(--emerald-deep); 
-            box-shadow: var(--shadow-subtle); flex-shrink: 0;
-        }
-
         .sidebar.collapsed .sidebar-title-box { display: none; }
 
         .sidebar-toggle { 
