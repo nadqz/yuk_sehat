@@ -8,7 +8,7 @@
                 <img src="{{ secure_asset('assets/img/full-logo.png') }}" 
                      alt="Logo Yuk Sehat" 
                      class="main-logo-img"
-                     style="height: 40px; width: auto; object-fit: contain; padding-left: 10px">
+                     style="height: 40px; width: auto; object-fit: contain; padding-left: 0px">
             </div>
 
             {{-- Judul Halaman --}}
