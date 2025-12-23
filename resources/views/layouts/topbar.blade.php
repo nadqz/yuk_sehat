@@ -8,7 +8,7 @@
                 <img src="{{ secure_asset('assets/img/full-logo.png') }}" 
                      alt="Logo Yuk Sehat" 
                      class="main-logo-img"
-                     style="height: 25px; width: auto; object-fit: contain;">
+                     style="height: 35px; width: auto; object-fit: contain;">
             </div>
 
             {{-- Judul Halaman --}}
@@ -154,7 +154,7 @@
 
 .main-page-title {
     margin: 0; 
-    font-size: 22px; 
+    font-size: 20px; 
     font-weight: 700; 
     color: var(--emerald-deep); 
     letter-spacing: -0.5px;
