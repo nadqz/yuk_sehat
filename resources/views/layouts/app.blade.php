@@ -82,7 +82,7 @@
             position: fixed; 
             top: 0; left: 0 !important;
             height: var(--topbar-height);
-            padding: 0 35px 0 100px; /* Padding kiri agar logo tak tertutup sidebar saat ciut */
+            padding: 0 35px 0 20px; /* Padding kiri agar logo tak tertutup sidebar saat ciut */
             display: flex; 
             justify-content: space-between;
             align-items: center; 
