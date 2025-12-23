@@ -107,7 +107,7 @@
             z-index: 100; /* Diatas Topbar */
         }
 
-        .sidebar.collapsed { width: 78px; padding: 15px 25px; }
+        .sidebar.collapsed { width: 78px; padding: 15px 10px;}
 
         .sidebar-header { 
             display: flex; align-items: center; gap: 15px; margin-bottom: 40px; 
