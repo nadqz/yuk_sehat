@@ -4,12 +4,13 @@
             
             {{-- Area Logo --}}
             <div class="topbar-logo-mobile" style="margin-top: 10px;">
-                <img src="{{ asset('assets/img/full-logo.png') }}" 
+                {{-- DIUBAH: Menggunakan secure_asset agar logo muncul di jalur HTTPS --}}
+                <img src="{{ secure_asset('assets/img/full-logo.png') }}" 
                      alt="Logo Yuk Sehat" 
                      class="main-logo-img">
             </div>
 
-            {{-- Judul Halaman: Otomatis Sembunyi di Mobile --}}
+            {{-- Judul Halaman --}}
             <div class="topbar-title-desktop">
                 <div class="title-wrapper">
                     <h1 class="main-page-title">@yield('title')</h1>
@@ -20,21 +21,18 @@
     </div>
 
     <div class="user-box">
-        {{-- Trigger Dropdown --}}
+        {{-- Area User Info & Dropdown tetap sama karena tidak menggunakan fungsi asset() --}}
         <div class="user-info-trigger" onclick="toggleUserDropdown()">
-            {{-- Nama User: Otomatis Sembunyi di Mobile --}}
             <div class="user-info">
                 <span class="name">{{ Auth::user()->name }}</span>
                 <span class="tagline">User Yuk Sehat!!</span>
             </div>
             
-            {{-- Avatar: Selalu Muncul --}}
             <div class="user-avatar">
                 {{ strtoupper(substr(Auth::user()->name, 0, 1)) }}
             </div>
         </div>
 
-        {{-- Dropdown Menu --}}
         <div id="userDropdown" class="user-dropdown">
             <a href="{{ route('profile.edit') }}" class="dropdown-item">
                 <div class="item-content">
@@ -50,7 +48,6 @@
             
             <hr style="border: 0; border-top: 1px solid var(--platinum-line); margin: 10px 0;">
             
-            {{-- Ganti form logout lama Anda dengan ini --}}
             <form id="logout-form" method="POST" action="{{ route('logout') }}" style="display: none;">
                 @csrf
             </form>
