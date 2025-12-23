@@ -13,6 +13,10 @@
     <form action="{{ route('input.data.store') }}" method="POST">
         @csrf
         
+        {{-- INPUT TERSEMBUNYI: Menghindari error 'weight' not found di database --}}
+        <input type="hidden" name="weight" value="{{ auth()->user()->latest_weight ?? 70 }}">
+        <input type="hidden" name="bmi_score" value="{{ auth()->user()->latest_bmi ?? 22.5 }}">
+        
         {{-- SECTION 0: TANGGAL --}}
         <div class="form-card-platinum date-section">
             <div class="date-flex-wrapper">
@@ -37,11 +41,13 @@
                 </div>
                 <div class="form-group-platinum">
                     <label>Olahraga (Menit)</label>
-                    <input type="number" name="exercise" placeholder="cth: 30" class="plat-input">
+                    {{-- PERBAIKAN: Nama disesuaikan ke database --}}
+                    <input type="number" name="exercise_minutes" placeholder="cth: 30" class="plat-input">
                 </div>
                 <div class="form-group-platinum">
                     <label>Hidrasi (Gelas Air)</label>
-                    <input type="number" name="water" placeholder="cth: 8" class="plat-input">
+                    {{-- PERBAIKAN: Nama disesuaikan ke database --}}
+                    <input type="number" name="water_intake" placeholder="cth: 8" class="plat-input">
                 </div>
             </div>
         </div>
@@ -62,16 +68,19 @@
                 </div>
                 <div class="form-group-platinum">
                     <label>Tingkat Stres (1-5)</label>
-                    <input type="range" name="stress" min="1" max="5" class="plat-range">
+                    {{-- PERBAIKAN: Nama disesuaikan ke database --}}
+                    <input type="range" name="stress_level" min="1" max="5" class="plat-range">
                 </div>
                 <div class="form-group-platinum">
                     <label>Fokus Kerja (1-5)</label>
-                    <input type="range" name="focus" min="1" max="5" class="plat-range">
+                    {{-- PERBAIKAN: Nama disesuaikan ke database --}}
+                    <input type="range" name="focus_level" min="1" max="5" class="plat-range">
                 </div>
             </div>
             <div class="form-group-platinum gratitude-box">
                 <label>Satu hal yang disyukuri hari ini:</label>
-                <textarea name="gratitude" class="plat-input" rows="3" placeholder="Tuliskan di sini..."></textarea>
+                {{-- PERBAIKAN: Nama disesuaikan ke database --}}
+                <textarea name="gratitude_note" class="plat-input" rows="3" placeholder="Tuliskan di sini..."></textarea>
             </div>
         </div>
 
@@ -91,9 +100,9 @@
                 <div class="form-group-platinum">
                     <label>Kualitas Bangun</label>
                     <select name="sleep_quality" class="plat-input">
-                        <option>Segar Bugar ⚡</option>
-                        <option selected>Cukup 🆗</option>
-                        <option>Masih Ngantuk 😴</option>
+                        <option value="Segar Bugar ⚡">Segar Bugar ⚡</option>
+                        <option value="Cukup 🆗" selected>Cukup 🆗</option>
+                        <option value="Masih Ngantuk 😴">Masih Ngantuk 😴</option>
                     </select>
                 </div>
             </div>
