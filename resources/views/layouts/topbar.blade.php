@@ -47,17 +47,17 @@
                 </div>
             </a>
             
-            <hr style="border: 0; border-top: 1px solid var(--platinum-line); margin: 10px 0;">
+            <hr style="border: 0; border-top: 1px solid var(--platinum-line);">
             
             <form id="logout-form" method="POST" action="{{ route('logout') }}" style="display: none;">
                 @csrf
             </form>
 
             <a href="#" onclick="confirmLogout(event)" 
-                style="display: block; padding: 20px; border-radius: 10px; text-decoration: none; color: #e11d48; font-weight: 600; transition: 0.2s;" 
+                style="display: block; padding-left: 20px; border-radius: 15px; text-decoration: none; color: #e11d48; font-weight: 600; transition: 0.2s;" 
                 onmouseover="this.style.background='#fff1f2'" 
                 onmouseout="this.style.background='transparent'">
-                <div style="display: flex; align-items: left; gap: 10px;">
+                <div style="display: flex; align-items: left; gap: 15px;">
                     <i data-lucide="log-out" style="width: 14px;"></i>
                     <span class="logout-text" style="font-size: 12px;">Log Out</span>
                 </div>
@@ -213,7 +213,7 @@
 /* --- LOGIKA RESPONSIVE MOBILE (PENTING) --- */
 @media (max-width: 768px) {
     .topbar {
-        height: 80px !important;
+        height: 60px !important;
         padding: 0 20px !important; /* Reset padding di Mobile */
     }
 
@@ -221,41 +221,36 @@
         display: none !important; /* Hilangkan teks di HP */
     }
 
-    .main-logo-img { height: 40px; }
+    .main-logo-img { height: 20px; }
 
     .user-info-trigger { gap: 0 !important; padding: 0 !important; }
 
     .user-avatar {
-        width: 42px !important;
-        height: 42px !important;
-        font-size: 16px !important;
+        width: 30px !important;
+        height: 30px !important;
+        font-size: 14px !important;
     }
 
     .swal2-popup.small-mobile-swal {
         font-family: 'Plus Jakarta Sans', sans-serif !important;
     }
 
-    .swal2-title {
-        padding-top: 0 !important;
-        margin-bottom: 5px !important;
-    }
-
     .swal2-html-container {
-        font-size: 13px !important;
+        font-size: 12px !important;
         color: #64748b !important;
     }
 
     /* Ukuran Tombol yang lebih kecil dan rapi */
     .swal2-confirm, .swal2-cancel {
-        font-size: 13px !important;
+        font-size: 12px !important;
         font-weight: 700 !important;
         padding: 10px 20px !important;
-        border-radius: 12px !important;
+        border-radius: 5px !important;
     }
 
     .swal2-icon {
         transform: scale(0.7); /* Mengecilkan ikon peringatan agar tidak dominan */
-        margin: 10px auto !important;
+        margin: 5px auto !important;
     }
 }
 </style>
