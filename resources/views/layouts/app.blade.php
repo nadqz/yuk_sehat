@@ -11,7 +11,14 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="YukSehat">
     
-    <link rel="apple-touch-icon" href="{{ secure_asset('assets/img/icon-192.png') }}">
+   {{-- Icon standar untuk Tab Browser --}}
+    <link rel="icon" type="image/x-icon" href="{{ secure_asset('assets/img/favicon.ico') }}">
+    
+    {{-- Icon untuk perangkat Apple (iPhone/iPad) --}}
+    <link rel="apple-touch-icon" href="{{ secure_asset('assets/img/apple-touch-icon.png') }}">
+    
+    {{-- Icon untuk Android/PWA --}}
+    <link rel="icon" type="image/png" sizes="192x192" href="{{ secure_asset('assets/img/icon-192.png') }}">
 
     <meta name="theme-color" content="#2f7f6a">
 
