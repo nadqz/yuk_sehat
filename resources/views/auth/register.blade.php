@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Daftar | Yuk Sehat!!</title>
   
-  <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+  <link rel="stylesheet" href="{{ secure_asset('assets/css/style.css') }}">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet" />
 
   <style>
@@ -167,7 +167,7 @@
   <div class="register-wrapper">
     <div class="register-card">
       <div class="logo">
-        <img src="{{ asset('assets/img/logo-yuk-sehat.png') }}" alt="Yuk Sehat!!" />
+        <img src="{{ secure_asset('assets/img/logo-yuk-sehat.png') }}" alt="Yuk Sehat!!" />
         <h1>Yuk Sehat!!</h1>
       </div>
 
@@ -208,6 +208,6 @@
     </div>
   </div>
 
-  <script src="{{ asset('assets/js/register.js') }}"></script>
+  <script src="{{ secure_asset('assets/js/register.js') }}"></script>
 </body>
 </html>
