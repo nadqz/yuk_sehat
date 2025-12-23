@@ -177,7 +177,7 @@
             .nav-links {
                 width: 100%;
                 justify-content: center;
-                padding: 0 15%;
+                padding: 0 10%;
             }
             .nav-links a {
                 margin-left: 0;
