@@ -5,18 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <link rel="manifest" href="{{ asset('manifest.json') }}">
+    <link rel="manifest" href="{{ secure_asset('manifest.json') }}">
 
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="apple-mobile-web-app-title" content="YukSehat">
-    <link rel="apple-touch-icon" href="{{ asset('assets/img/icon-192.png') }}">
+    
+    <link rel="apple-touch-icon" href="{{ secure_asset('assets/img/icon-192.png') }}">
 
     <meta name="theme-color" content="#2f7f6a">
 
     <title>@yield('title', 'Yuk Sehat!!')</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <style>
@@ -207,12 +211,11 @@
                 <span class="desktop-only">• v1.0.1 Beta</span>
             </p>
         </footer>
-
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    <script>
+   <script>
         document.addEventListener('DOMContentLoaded', function() {
             lucide.createIcons();
             
